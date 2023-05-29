@@ -25,5 +25,11 @@ function Feed() {
 //     });
 //     setPosts(updatedPosts);
   //}
+
+  return(
+    <>
+    Hello World
+    </>
+  )
 }  
 export default Feed;
