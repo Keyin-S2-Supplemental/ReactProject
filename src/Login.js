@@ -1,8 +1,8 @@
 // Login.js
 
 import { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -18,6 +18,7 @@ function Login() {
   }
 
   return (
+    <div className=''>
     <form onSubmit={handleSubmit}>
       <label>
         Username:
@@ -28,8 +29,12 @@ function Login() {
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
       <button type="submit">Log in</button>
+      <p>
+  Don't have an account?{' '}
+  <Link to="/signup">Sign up</Link>
+</p>
     </form>
+</div>       
   );
 }
-
 export default Login;

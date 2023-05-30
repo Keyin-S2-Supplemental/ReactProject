@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './Style.css';
 
 function Signup() {
   const [name, setName] = useState('');
@@ -15,7 +17,14 @@ function Signup() {
      history('/');
    }
 
+   <p>
+  Already have an account?{' '}
+  <Link to="/login">Log in</Link>
+</p>
+
+
   return (
+    <div className='signup-container'>
     <form onSubmit={handleSubmit}>
       <label>
         Name:
@@ -30,7 +39,12 @@ function Signup() {
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
       <button type="submit">Sign up</button>
+      <p>
+  Already have an account?{' '}
+  <Link to="/login">Log in</Link>
+</p>
     </form>
+</div>
   );
 }
 
