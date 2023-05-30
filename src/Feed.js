@@ -15,21 +15,15 @@ function Feed() {
     ]);
   }, []);
 
-//  function handleLike(id) {
-//     // Update post likes here
-//     const updatedPosts = posts.map((post) => {
-//       if (post.id === id) {
-//         return { ...post, likes: post.likes + 1 };
-//       }
-//       return post;
-//     });
-//     setPosts(updatedPosts);
-  //}
-
-  return(
-    <>
-    Hello World
-    </>
-  )
+  function handleLike(id) {
+     // Update post likes here
+     const updatedPosts = posts.map((post) => {
+       if (post.id === id) {
+         return { ...post, likes: post.likes + 1 };
+       }
+       return post;
+     });
+     setPosts(updatedPosts);
+  }
 }  
 export default Feed;

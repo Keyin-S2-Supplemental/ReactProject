@@ -9,11 +9,11 @@ function Signup() {
   const [password, setPassword] = useState('');
   const history = useNavigate();
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    // Create new user account here
-    history.push('/');
-  }
+   function handleSubmit(e) {
+     e.preventDefault();
+     // Create new user account here
+     history('/');
+   }
 
   return (
     <form onSubmit={handleSubmit}>

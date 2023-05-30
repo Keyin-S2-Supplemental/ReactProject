@@ -1,7 +1,8 @@
 // Login.js
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -11,7 +12,9 @@ function Login() {
   function handleSubmit(e) {
     e.preventDefault();
     // Authenticate user here
-    history.push('/');
+    console.log('handleSubmit')
+    history('/');
+    
   }
 
   return (
