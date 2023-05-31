@@ -25,7 +25,7 @@ function Signup() {
 
   return (
     <div className='signup-container'>
-    <form onSubmit={handleSubmit}>
+    <form className="signup-form" onSubmit={handleSubmit}>
       <label>
         Name:
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
@@ -40,9 +40,9 @@ function Signup() {
       </label>
       <button type="submit">Sign up</button>
       <p>
-  Already have an account?{' '}
-  <Link to="/login">Log in</Link>
-</p>
+        Already have an account?{' '}
+        <Link to="/login">Log in</Link>
+      </p>
     </form>
 </div>
   );
