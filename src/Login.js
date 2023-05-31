@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './Style.css'
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -18,7 +19,7 @@ function Login() {
   }
 
   return (
-    <div className=''>
+    <div className='login-container'>
     <form onSubmit={handleSubmit}>
       <label>
         Username:
