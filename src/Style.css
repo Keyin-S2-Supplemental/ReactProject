@@ -17,8 +17,129 @@
     align-items: center;
     justify-content: center;
     height: 100vh; /* Adjust as needed */
-    background-image: './image.jpg';
+
   }
 
+  .username {
+    font-family: 'Italianno', cursive;
+    height: 10vh;
+    color: white;
+    font-size: x-large;
+  }
 
+  .password {
+    font-family: 'Italianno', cursive;
+    height: 20vh;
+    color: white;
+    font-size: x-large;
+  }
+
+  .email {
+    font-family: 'Italianno', cursive;
+    height: 20vh;
+    color: white;
+    font-size: x-large;
+  }
+
+  .name {
+    font-family: 'Italianno', cursive;
+    height: 20vh;
+    color: white;
+    font-size: x-large;
+  }
+
+  .password-signup {
+    font-family: 'Italianno', cursive;
+    height: 20vh;
+    color: white;
+    font-size: x-large;
+  }
+
+  .already-account {
+    font-family: 'Italianno', cursive;
+    padding-right: 0rem;
+    color: white;
+  }
+
+  .button {
+    font-family: 'Italianno', cursive;
+    height: 10vh;
+    padding-left: 0rem;
+    color: white;
+    background: transparent;
+  }
+
+  .no-account {
+    font-family: 'Italianno', cursive;
+    padding-right: 0rem;
+    color: white;
+  }
   
+  body {
+    background-image: url('https://th-thumbnailer.cdn-si-edu.com/sWf0xF1il7OWYO8j-PGqwBvxTAE=/1000x750/filters:no_upscale():focal(2550x1724:2551x1725)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/9a/d7/9ad71c28-a69d-4bc0-b03d-37160317bb32/gettyimages-577674005.jpg')
+  }
+
+  input[type=text] {
+    padding: 12px;
+    height: 0;
+    border-radius: 15px;
+    margin: 8px;
+    background: white;
+    opacity: 50%;
+    border: 0;  
+  }
+
+  input[type=password] {
+    padding: 12px;
+    height: 0;
+    border-radius: 15px;
+    margin: 8px;
+    background: white;
+    opacity: 50%;
+    border: 0;
+  }
+
+  input[type=email] {
+    padding: 12px;
+    height: 0;
+    border-radius: 15px;
+    margin: 8px;
+    background: white;
+    opacity: 50%;
+    border: 0;
+  }
+
+  .title {
+    color: white;
+    font-size: xx-large;
+  }
+
+  .profile-picture {
+    height: 10vh;
+    padding-top: 7rem;
+    padding-left: 35rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .feed-text {
+    padding-left: 35rem;
+    color: white;
+    font-family: 'Italianno', cursive;
+    padding-bottom: 0rem;
+  }
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Italianno', cursive;
+    font-size: 3rem;
+    color: white;
+  }
+
+  .your-feed {
+    width: 50px;
+    height: 50px;
+  }

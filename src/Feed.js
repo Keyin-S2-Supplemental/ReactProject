@@ -1,29 +1,44 @@
-// Feed.js
+import React from 'react';
+import './Style.css'
 
-import { useState, useEffect } from 'react';
+const Feed = () => {
+  const posts = [
+    {
+      id: 1,
+      author: 'John Doe',
+      profilePicture: 'https://i.pinimg.com/236x/bc/56/d9/bc56d961ab4dd6d579ea5195f643b98a.jpg',
+      text: 'Catching fire by Suzanne Collins is a must read! 11/10',
+    },
+    {
+      id: 2,
+      author: 'Jane Smith',
+      profilePicture: 'https://e0.pxfuel.com/wallpapers/516/374/desktop-wallpaper-harry-potter-cartoon-kawaii-harry-potter.jpg',
+      text: 'Chamber of Secrets FTW!! 10/10',
+    },
+    {
+      id: 3,
+      author: 'David Johnson',
+      profilePicture: 'https://m.media-amazon.com/images/I/71jWXXLOU7L.jpg',
+      text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    },
+  ];
 
-function Feed() {
-  const [user, setUser] = useState("");
-  const [posts, setPosts] = useState("");
+  return (
+    <div className="feed-container">
+      <div className="your-feed">
+        <img className='your-feed' src="https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg"/>
+      </div>
+      {posts.map(post => (
+        <div className="post" key={post.id}>
+          <img src={post.profilePicture} alt={post.author} className="profile-picture" />
+          <div className='feed-text'>
+          <p>{post.text}</p>
+          <p2>{post.author}</p2>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-  useEffect(() => {
-    // Get user data and posts here
-    setUser({ name: 'John Doe', profilePic: '/profile.jpg' });
-    setPosts([
-      { id: 1, user: 'Jane Doe', profilePic: '/jane.jpg', likes: 5, content: 'Lorem ipsum dolor sit amet.' },
-      { id: 2, user: 'Bob Smith', profilePic: '/bob.jpg', likes: 2, content: 'Consectetur adipiscing elit.' },
-    ]);
-  }, []);
-
-  function handleLike(id) {
-     // Update post likes here
-     const updatedPosts = posts.map((post) => {
-       if (post.id === id) {
-         return { ...post, likes: post.likes + 1 };
-       }
-       return post;
-     });
-     setPosts(updatedPosts);
-  }
-}  
 export default Feed;
