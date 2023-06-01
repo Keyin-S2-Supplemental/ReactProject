@@ -1,8 +1,9 @@
 // Login.js
 
 import { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './Style.css'
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -13,23 +14,36 @@ function Login() {
     e.preventDefault();
     // Authenticate user here
     console.log('handleSubmit')
-    history('/');
+    history('/feed');
     
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='login-container'>
+    <form className="login-form" onSubmit={handleSubmit}>
+      <div className='username'>
       <label>
         Username:
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
       </label>
+      </div>
+      <div className='password'>
       <label>
         Password:
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
+      </div>
+      <div className='button'>
       <button type="submit">Log in</button>
+      </div>
+      <div className='no-account'>
+      <p>
+  Don't have an account?{' '}
+  <Link to="/signup">Sign up</Link>
+</p>
+</div>
     </form>
+</div>       
   );
 }
-
 export default Login;
